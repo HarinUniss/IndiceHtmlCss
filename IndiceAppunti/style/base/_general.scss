@@ -1,0 +1,8 @@
+/* azzero possibili effetti di tutti gli elementi */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
