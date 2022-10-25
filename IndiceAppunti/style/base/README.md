@@ -1,4 +1,4 @@
-Qui ci :
+Qui ci trovo:
 
     Caratteristiche base del sito 
     police dei caratteri
