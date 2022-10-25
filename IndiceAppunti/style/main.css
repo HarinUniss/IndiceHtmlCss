@@ -1,0 +1,110 @@
+@charset "UTF-8";
+/*l'ordine delle pagine è importante!!!*/
+body {
+  font-family: Montserrat, sans-serif;
+}
+
+/* azzero possibili effetti di tutti gli elementi */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* variabili colore */
+/* Sfumature di grigio */
+/* variabile raggio del bordo */
+.nav {
+  position: fixed; /* posizione fissa */
+  width: 100vw; /* larghezza */
+  box-shadow: 0 0 10px #e1e5ee; /* colore ombra */
+}
+.nav__list { /* nav__list */
+  display: flex;
+  justify-content: flex-start; /* allinea all'estremita*/
+  align-items: center; /* alline ail contenutop al centro */
+  gap: 2rem; /* spazzio tra i vari riquadri */
+  margin: 0 2rem; /* dimensione margini */
+}
+.nav__listlogo {
+  list-style: none; /* non fare la lista ne puntata ne numerata*/
+  margin-right: auto; /*margine a destra automatico */
+  cursor: pointer; /*quando il cursore ci passa sopra diventa una manina */
+}
+.nav__listlogo svg {
+  width: 2.5rem; /* dimensione logo */
+  transition: fill 250ms ease-in; /*variazione della transizione*/
+}
+.nav__listlogo svg:hover, .nav__listlogo svg:focus {
+  fill: #62e559; /*colore logo quando ci passo sopra o po clicco */
+}
+.nav__listitem { /* nav__listitem */
+  list-style: none; /* lista senza puntini o numerazione */
+  font-weight: bold; /* font grassetto */
+  position: relative; /* posizione relativa del blocco */
+  padding: 1.5rem 1rem; /* spazio tra il suo contenuto e il suo bordo superiore ed inferiore 1.5 , destra e sinistra 1 */
+  cursor: pointer; /* quando il cursore ci passa sopra diventa una manina */
+}
+.nav__listitem::after {
+  content: ""; /* se voglio qualcosa dopo */
+  width: 0; /* larghezza */
+  height: 0.3rem; /* latezza */
+  border-radius: 0.2rem; /* uso la variabile per i bordi arrotondati */
+  position: absolute; /*posizione assoluta rispetto allblocco che lo ospita */
+  left: 1rem; /* distanza da bordo a sinistra*/
+  bottom: 0.8rem; /* distanza dal bordo basso */
+  background-color: #62e559; /*colore di sfondo utilizzando una variabile*/
+  transition: width 200ms ease-in; /* svilopo dell animazione */
+}
+.nav__listitem:hover::after, .nav__listitem:focus::after { /* e quando ci clicco sopra */
+  width: 80%;
+}
+.nav__listitem:hover ul, .nav__listitem:focus ul { /* e quando ci clicco sopra  */
+  opacity: 1; /* opacitá di ul a 1 */
+  visibility: visible; /* rendi visibile il riquadro */
+}
+.nav__listitemdrop {
+  list-style: none; /* lista senza puntini o numerazione */
+  position: absolute; /* posizione assoluta rispetto allblocco che lo ospita */
+  top: 4rem; /* distanza dal bordo alto */
+  left: 10rem; /* distanza dal bordo sinistro */
+  box-shadow: 0 0 10px #e1e5ee; /* ombra e dimensioni ombra del box*/
+  background-color: white; /*colore sfondo*/
+  border-radius: 0.2rem; /* bordi tondi */
+  width: 12rem; /* larghezza blocco*/
+  padding: 1rem; /*distanza interna dai bordi*/
+  display: flex; /* considero i blocco come una flex box*/
+  flex-direction: column; /* dispongo il blocco in colonna*/
+  gap: 0.5rem; /* spazzio tra i vari blocchi */
+  opacity: 0; /* opacita 0 */
+  visibility: hidden; /* rendi nascosto il riquadro */
+  transition: opacity 300ms ease-in-out; /* variazione di opacitá in 200ms*/
+  /*
+    ease - specifica un effetto di transizione con un avvio lento, quindi veloce, quindi fine lento (impostazione predefinita)
+    linear - specifica un effetto di transizione con la stessa velocità dall'inizio alla fine
+    ease-in - specifica un effetto di transizione con un avvio lento
+    ease-out - specifica un effetto di transizione con un'estremità lenta
+    ease-in-out - specifica un effetto di transizione con inizio e fine lenti
+    cubic-bezier(n,n,n,n) - consente di definire i propri valori in una funzione di Bezier cubica
+  */
+}
+.nav__listitemdrop li {
+  list-style: none; /* lista senza puntini o numerazione */
+  padding: 0.5rem 1rem;
+  border-radius: 0.2rem;
+  transition: background-color 200ms ease-in-out;
+  /*cambio sfondo del riquadro quando ci passo sopra il mouse o ci clicco */
+}
+.nav__listitemdrop li:hover, .nav__listitemdrop li:focus {
+  background-color: #d9f4d7;
+}
+
+/*********************************************************************************************************/
+/*CASO IN CUI LO SCHERMO DEL DISPOSITIVO é PIU PICCOLO DI 700px*/
+@media screen and (max-width: 700px) {
+  /*DA FARE IN FUTURO PER UN INTERFACCIA ALLUNGATA*/
+}
+
+/*# sourceMappingURL=main.css.map */

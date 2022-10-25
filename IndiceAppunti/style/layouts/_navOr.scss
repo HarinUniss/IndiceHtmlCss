@@ -7,7 +7,7 @@
 
   &__list { /* nav__list */
     display: flex;
-    justify-content: flex; /* allinea all'estremita*/
+    justify-content: flex-start; /* allinea all'estremita*/
     align-items: center; /* alline ail contenutop al centro */
     gap: 2rem; /* spazzio tra i vari riquadri */
     margin: 0 2rem; /* dimensione margini */
