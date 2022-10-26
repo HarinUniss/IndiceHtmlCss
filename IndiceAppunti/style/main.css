@@ -23,7 +23,7 @@ body {
 }
 .nav__list { /* nav__list */
   display: flex;
-  justify-content: flex-start; /* allinea all'estremita*/
+  justify-content: flex-end; /* allinea all'estremita*/
   align-items: center; /* alline ail contenutop al centro */
   gap: 2rem; /* spazzio tra i vari riquadri */
   margin: 0 2rem; /* dimensione margini */
@@ -69,7 +69,7 @@ body {
   list-style: none; /* lista senza puntini o numerazione */
   position: absolute; /* posizione assoluta rispetto allblocco che lo ospita */
   top: 4rem; /* distanza dal bordo alto */
-  left: 10rem; /* distanza dal bordo sinistro */
+  left: -1rem; /* distanza dal bordo sinistro */
   box-shadow: 0 0 10px #e1e5ee; /* ombra e dimensioni ombra del box*/
   background-color: white; /*colore sfondo*/
   border-radius: 0.2rem; /* bordi tondi */
