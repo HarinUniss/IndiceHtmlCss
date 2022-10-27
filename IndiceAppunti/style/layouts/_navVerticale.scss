@@ -1,56 +1,45 @@
 
-
 .nav {
   position: fixed; /* posizione fissa */
-  width: 100vw; /* larghezza */
-  box-shadow: 0 0 10px $clr-gray300; /* colore ombra */
+  width: 100px; /* larghezza */
+  box-shadow: 0 0 15px $clr-gray300; /* colore ombra */
 
   &__list { /* nav__list */
     display: flex;
-    justify-content: flex-start; /* allinea all'estremita*/
+    flex-direction: column;
+    justify-content: flex-end; /* allinea all'estremita*/
     align-items: center; /* alline ail contenutop al centro */
-    gap: 2rem; /* spazzio tra i vari riquadri */
-    margin: 0 2rem; /* dimensione margini */
+    gap: 0.5rem; /* spazzio tra i vari riquadri */
+    margin: 0.5rem; /* dimensione margini */
 
-    &logo {
-      list-style: none; /* non fare la lista ne puntata ne numerata*/
-      margin-right: auto; /*margine a destra automatico */
-      cursor: pointer; /*quando il cursore ci passa sopra diventa una manina */
-
-
-      svg {
-        width: 2.5rem; /* dimensione logo */
-        transition: fill 250ms ease-in; /*variazione della transizione*/
-
-        &:hover,
-        &:focus {
-          fill: $clr-primary; /*colore logo quando ci passo sopra o po clicco */
-        }
-      }
-    }
 
     &item { /* nav__listitem */
       list-style: none; /* lista senza puntini o numerazione */
       font-weight: bold; /* font grassetto */
       position: relative; /* posizione relativa del blocco */
-      padding: 1.5rem 1rem; /* spazio tra il suo contenuto e il suo bordo superiore ed inferiore 1.5 , destra e sinistra 1 */
+      top: 5px; /* distanza dal bordo alto */
+      box-shadow: 0 0 10px $clr-gray300; /* ombra e dimensioni ombra del box*/
+      border-radius: $radius; /* bordi tondi */
+      padding: 1rem; /*distanza interna dai bordi*/
+      width: 120px;
       cursor: pointer; /* quando il cursore ci passa sopra diventa una manina */
+      transition: width 200ms ease-in; /* svilopo dell animazione */
 
-      &::after {
-        content: ""; /* se voglio qualcosa dopo */
-        width: 0; /* larghezza */
-        height: 0.3rem; /* latezza */
-        border-radius: $radius; /* uso la variabile per i bordi arrotondati */
-        position: absolute; /*posizione assoluta rispetto allblocco che lo ospita */
-        left: 1rem; /* distanza da bordo a sinistra*/
-        bottom: 0.8rem; /* distanza dal bordo basso */
-        background-color: $clr-primary; /*colore di sfondo utilizzando una variabile*/
-        transition: width 200ms ease-in; /* svilopo dell animazione */
+      svg { /* immagine interna con cabio colore graduale */
+        width: 2.5rem; /* dimensione logo */
+        transition: fill 300ms ease-in; /*variazione della transizione*/
+
+      }
+      &:hover svg,
+      &:focus svg{
+         fill: $clr-primary; /*colore logo quando ci passo sopra o po clicco */
       }
 
-      &:hover::after, /* quando ci passo il cursore sopra */
-      &:focus::after { /* e quando ci clicco sopra */
-        width: 80%;
+      h2 {  /* titolo h2 con cabio colore  (funziona solo dentro nav__listitem)*/
+        &:hover , /* quando ci passo il cursore sopra */
+        &:focus  { /* e quando ci clicco sopra */
+          color: $clr-primary; /*colore logo quando ci passo sopra o po clicco */
+        }
       }
 
       &:hover ul, /* quando ci passo il cursore sopra */
@@ -62,13 +51,13 @@
       &drop {
         list-style: none; /* lista senza puntini o numerazione */
         position: absolute; /* posizione assoluta rispetto allblocco che lo ospita */
-        top: 4rem; /* distanza dal bordo alto */
-        left: 10rem; /* distanza dal bordo sinistro */
+        top: 5px; /* distanza dal bordo alto */
+        left: 80px; /* distanza dal bordo sinistro */
         box-shadow: 0 0 10px $clr-gray300; /* ombra e dimensioni ombra del box*/
         background-color: white; /*colore sfondo*/
         border-radius: $radius; /* bordi tondi */
-        width: 12rem; /* larghezza blocco*/
-        padding: 1rem; /*distanza interna dai bordi*/
+        width: 10rem; /* larghezza blocco*/
+        padding: 0.5rem; /*distanza interna dai bordi*/
         display: flex; /* considero i blocco come una flex box*/
         flex-direction: column; /* dispongo il blocco in colonna*/
         gap: 0.5rem; /* spazzio tra i vari blocchi */
@@ -76,14 +65,6 @@
         visibility: hidden; /* rendi nascosto il riquadro */
         transition: opacity 300ms ease-in-out; /* variazione di opacitá in 200ms*/
 
-        /*
-          ease - specifica un effetto di transizione con un avvio lento, quindi veloce, quindi fine lento (impostazione predefinita)
-          linear - specifica un effetto di transizione con la stessa velocità dall'inizio alla fine
-          ease-in - specifica un effetto di transizione con un avvio lento
-          ease-out - specifica un effetto di transizione con un'estremità lenta
-          ease-in-out - specifica un effetto di transizione con inizio e fine lenti
-          cubic-bezier(n,n,n,n) - consente di definire i propri valori in una funzione di Bezier cubica
-        */
         li {
           list-style: none; /* lista senza puntini o numerazione */
           padding: 0.5rem 1rem;
@@ -109,6 +90,7 @@
 
 @media screen and (max-width: 700px)
 {
-/*DA FARE IN FUTURO PER UN INTERFACCIA ALLUNGATA*/
+  /*DA FARE IN FUTURO PER UN INTERFACCIA ALLUNGATA*/
 
 }
+
