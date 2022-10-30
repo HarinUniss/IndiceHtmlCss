@@ -1,0 +1,28 @@
+@charset "UTF-8";
+/*l'ordine delle pagine è importante!!!*/
+/*Google FOnts Import Link*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
+* {
+  /*Google Font Import*/
+  font-family: "Poppins", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* variabili colore */
+/* Sfumature di grigio */
+/* variabile raggio del bordo */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #161d34;
+}
+
+/*togliere Or se si vuole il file orizontale*/
+
+/*# sourceMappingURL=main.css.map */
