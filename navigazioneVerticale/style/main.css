@@ -91,7 +91,7 @@
   padding: 6px 6px 14px 80px;
   margin-top: -10px;
   background: #2a324b;
-  /* display: none;  /*di base non mostrarlo*/
+  display: none; /*di base non mostrarlo*/
 }
 
 .sidebar .nav-links li .sub-menu a {
@@ -139,7 +139,7 @@
 
 .sidebar .nav-links li .sub-menu.blank {
   opacity: 1;
-  pointer-events: none;
+  pointer-events: auto;
   padding: 3px 20px 6px 16px;
 }
 
@@ -150,6 +150,47 @@
 
 .sidebar .nav-links li:hover { /*animazione quando passo con il cursore sopra*/
   background: #2a324b;
+}
+
+.sidebar .profile-details {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #2a324b;
+  padding: 5px 0;
+}
+
+.sidebar .profile-details .profile-content {
+  display: flex;
+  align-items: center;
+}
+
+.sidebar .profile-details img {
+  height: 53px;
+  width: 52px;
+  object-fit: cover;
+  border-radius: 16px;
+  margin: 0 14px 0 12px;
+  background: #4f546c;
+  padding: 5px;
+}
+
+.sidebar .profile-details .profile_name,
+.sidebar .profile-details .job {
+  color: #f9fbff;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.sidebar .profile-details .job {
+  font-size: 12px;
+}
+
+.sidebar .profile-details .profile-content {
+  display: flex;
+  align-items: center;
 }
 
 /*togliere Or se si vuole il file orizontale*/
