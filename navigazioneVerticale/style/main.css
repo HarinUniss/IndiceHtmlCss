@@ -20,7 +20,136 @@
   position: fixed;
   top: 0;
   left: 0;
+  height: 100%;
+  width: 260px;
   background: #161d34;
+}
+
+.sidebar .logo-details {
+  height: 60px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar .logo-details i {
+  font-size: 30px;
+  color: #f9fbff;
+  /*background: $clr-primary-blue;*/
+  height: 50px;
+  min-width: 78px;
+  text-align: center;
+  line-height: 50px;
+}
+
+.sidebar .logo-details .logo_name {
+  font-size: 22px;
+  color: #f9fbff;
+  font-weight: 600;
+}
+
+.sidebar .nav-links {
+  /*background: red;*/
+  height: 100%;
+  padding-top: 30px;
+}
+
+.sidebar .nav-links li {
+  position: relative;
+  list-style: none;
+  transition: all 400ms ease; /* velocità transizioni sul blocco li*/
+}
+
+.sidebar .nav-links li i {
+  height: 50px;
+  min-width: 78px;
+  text-align: center;
+  line-height: 50px;
+  font-size: 20px;
+  color: #f9fbff;
+}
+
+.sidebar .nav-links li .icon-link { /*Link che danno il menu a tendina*/
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sidebar .nav-links li a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.sidebar .nav-links li a .link_name {
+  font-size: 18px;
+  font-weight: 400;
+  color: #f9fbff;
+}
+
+.sidebar .nav-links li .sub-menu {
+  padding: 6px 6px 14px 80px;
+  margin-top: -10px;
+  background: #2a324b;
+  /* display: none;  /*di base non mostrarlo*/
+}
+
+.sidebar .nav-links li .sub-menu a {
+  color: #f9fbff;
+  font-size: 15px;
+  padding: 5px 0;
+  white-space: nowrap;
+  opacity: 0.6;
+  transition: all 300ms ease;
+}
+
+.sidebar .nav-links li .sub-menu a:hover {
+  opacity: 1;
+  font-size: 16px;
+}
+
+.sidebar.close .nav-links li .sub-menu { /*NB da notare che .close è attaccato a .sidebar */
+  position: absolute;
+  left: 100%;
+  top: -10;
+  margin-top: 0;
+  padding: 10px 20px;
+  border-radius: 0 6px 6px 0;
+  transition: 0ms;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.sidebar .nav-links li .sub-menu .link_name {
+  display: none;
+}
+
+.sidebar.close .nav-links li .sub-menu .link_name {
+  font-size: 18px;
+  opacity: 1;
+  display: block;
+}
+
+.sidebar.close .nav-links li:hover .sub-menu {
+  top: 0;
+  opacity: 1;
+  pointer-events: auto;
+  transition: all 0.4s ease;
+}
+
+.sidebar .nav-links li .sub-menu.blank {
+  opacity: 1;
+  pointer-events: none;
+  padding: 3px 20px 6px 16px;
+}
+
+.sidebar .nav-links li:hover .sub-menu.blank {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.sidebar .nav-links li:hover { /*animazione quando passo con il cursore sopra*/
+  background: #2a324b;
 }
 
 /*togliere Or se si vuole il file orizontale*/
